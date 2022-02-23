@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn Social_Website_New.wsgi --log-files=-
+web: gunicorn connect2buddy-app.wsgi --log-files=-
