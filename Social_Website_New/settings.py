@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-kwy6qs+s$$1bk=%-u(v9iozic(562m4n&@i*=xig-@mo-#ajer
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['connect2buddy.herokuapp.com']
+ALLOWED_HOSTS = ['connect2buddy-app.herokuapp.com']
 
 
 # Application definition
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'Social_Website_New.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ddjteurutu8j27',
-        'USER':'tosmsdsqtkhaiq',
-        'PASSWORD':'f54c6811298f18136ada0fd656f9931aa93e8258b9dd39d9b5bc57d5466fcd1a',
-        'HOST':'ec2-52-204-196-4.compute-1.amazonaws.com',
+        'NAME': 'd7i2ejbchg3p41',
+        'USER':'ildcdytwqyutud',
+        'PASSWORD':'eef102c493a1fb3f03781c33a22d880b5272ef1c838701cff3b2b5b596b1bc4f',
+        'HOST':'ec2-52-45-73-150.compute-1.amazonaws.com',
         
     }
 }
