@@ -1,3 +1,3 @@
 release: python manage.py migrate
-web: gunicorn connect2buddy-app.wsgi --log-file=-
+web: gunicorn --chdir Social_Website_New manage.py:app 
 $heroku ps:scale web=1
