@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome To Your Social Networking Website</h1>
+    <h2>Sign Up Here</h2>
+    <form action="SignUp" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="Name">Username:</label>
+            <input type="text" name="Name" id="" placeholder="Enter Username">
+        </div>
+        <div>
+            <label for="Password">Password:</label>
+            <input type="password" name="Password" id="" placeholder="Enter Your Password">
+        </div>
+        <div>
+            <label for="Email">E-mail:</label>
+            <input type="email" name="Email" id="" placeholder="Enter your E-mail">
+        </div>
+        <div>
+            <label for="Phone">Mobile No.</label>
+            <input type="text" name="Phone" id="" placeholder="Enter your mobile no.">
+        </div>
+        <div>
+            <input type="submit" value="Sign Up">
+        </div>
+    </form>
+    <h3>Already a member?</h3>
+    <a href="SignIn">SignIn Here</a>
+</body>
+</html>

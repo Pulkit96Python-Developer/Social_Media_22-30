@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In User</title>
+</head>
+<body>
+    <form action="UserProfile" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="Name/Phone">Username:</label>
+            <input type="text" name="Name/Phone" id="" placeholder="Enter Username/Mobile No.">
+        </div>
+        <div>
+            <label for="Password">Password:</label>
+            <input type="password" name="Password" id="" placeholder="Enter Your Password">
+        </div>
+        <div>
+            <input type="submit" value="Sign In">
+        </div>
+    </form>
+</body>
+</html>

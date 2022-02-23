@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search result is</h1>
+    <h2 hidden>Profile Searched By:{{Profile_Searched_By}}</h2>
+    <h3 hidden>ID of searcher:{{id_of_searcher}}</h3>
+
+    {% for i in combined %}
+    <div>
+        <form action="{% url 'Visit_Profile' i.0 Profile_Searched_By id_of_searcher %}" method="post">
+            {% csrf_token %}
+            <a href="{% url 'Visit_Profile' i.0 Profile_Searched_By id_of_searcher %}">{{i.1}}</a>
+            <input type="text" name="Friend_Request_To_Be_Sent" id="" value="{{i.0}}" hidden>
+            <input type="submit" value="Add Friend">
+        </form>
+    </div>
+    {% endfor %}
+</body>
+</html>

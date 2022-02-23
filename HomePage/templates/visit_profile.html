@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Visited</title>
+</head>
+<body>
+    <H1>Profile Visited</H1>
+    <div>
+        <form action="{% url 'Friend_Request_Sent'%}" method="post">
+            {% csrf_token %}
+            <h2>{{Profile_Requested}}</h2>
+            <h3 hidden>searcher_id:{{searcher_id}}</h3>
+            <div>
+                <input type="text" name="Request_Sent_By" id="" value="{{searched_by}}" hidden>
+            </div>
+            <div>
+                <input type="text" name="Request_Sent_To" id="" value="{{Profile_Requested}}" hidden>
+            </div>
+            <div>
+                <input type="text" name="searcher_id" id="" value="{{searcher_id}}" hidden>
+            </div>
+            <div>
+                <label for="ID_Of_Profile_Requested" hidden>ID_Of_Profile_Requested:</label>
+                <input type="text" name="ID_Of_Profile_Requested" hidden id="" value="{{ID_Of_Profile_Requested}}">
+            </div>
+            <div>
+                <input type="submit" value="Add Friend">
+            </div>
+        </form>
+    </div>
+    <div>
+        <h3>Total Friends: {{Total_Friends}} </h3>
+    </div>
+    <div>
+        <h3 hidden>Profile Searched by: {{searched_by}}</h3>
+    </div>
+</body>
+</html>
